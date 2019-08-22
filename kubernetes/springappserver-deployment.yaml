@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: springappserver
+  labels:
+    app: springappserver
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: springappserver
+    spec:
+      containers:
+      - env:
+        - name: DATABASE_HOST
+          value: db
+        - name: DATABASE_NAME
+          value: desafio
+        - name: DATABASE_PASSWORD
+          value: mysql
+        - name: DATABASE_PORT
+          value: "3306"
+        - name: DATABASE_USER
+          value: root
+        image: lrochadev/colaboradores-api:latest
+        name: colaboradores-api
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
