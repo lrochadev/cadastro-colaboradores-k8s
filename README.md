@@ -17,4 +17,4 @@
 
 `4 - kubectl apply -f .`
 
-`5 - Acesse o dashboard com o comando: minikube dashboard`
+`5 - Acesse a aplicação: http://dev.local`
