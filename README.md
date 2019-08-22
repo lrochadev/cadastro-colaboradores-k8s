@@ -2,6 +2,7 @@
 
 **Kubernetes development tools**
 
+* Docker
 * Kubectl
 * Minikube
 * VirtualBox
